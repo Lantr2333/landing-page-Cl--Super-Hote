@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Méthode qui m'a Rendu Super-hôte - Anthony</title>
@@ -102,6 +103,12 @@
         transition: all 0.3s;
       }
 
+      .btn-primary:hover {
+        background: #e04848;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 90, 95, 0.3);
+      }
+
       /* Profile Section */
       .profile-section {
         background: white;
@@ -142,6 +149,10 @@
         text-align: center;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
+      }
+
+      .achievement-card:hover {
+        transform: translateY(-5px);
       }
 
       .achievement-card:nth-child(1) {
@@ -277,6 +288,13 @@
         border-radius: 15px;
         margin: 30px 0;
         border-left: 5px solid #00a699;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(0, 166, 153, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(0, 166, 153, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(0, 166, 153, 0); }
       }
 
       .key-insight h4 {
@@ -316,6 +334,11 @@
         background: rgba(255, 255, 255, 0.1);
         padding: 25px;
         border-radius: 15px;
+        transition: transform 0.3s;
+      }
+
+      .metric-card:hover {
+        transform: scale(1.05);
       }
 
       .metric-card h4 {
@@ -358,6 +381,13 @@
         color: white;
         font-size: 2em;
         font-weight: bold;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
       }
 
       .step:nth-child(1) .step-number {
@@ -408,6 +438,11 @@
         padding: 40px;
         border-radius: 15px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .testimonial:hover {
+        transform: translateY(-5px);
       }
 
       .testimonial-text {
@@ -451,7 +486,12 @@
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         text-align: center;
         position: relative;
-        transition: transform 0.3s;
+        transition: all 0.3s;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
       }
 
       .pricing-badge {
@@ -465,6 +505,12 @@
         border-radius: 20px;
         font-weight: bold;
         font-size: 0.9em;
+        animation: glow 2s infinite alternate;
+      }
+
+      @keyframes glow {
+        from { box-shadow: 0 0 5px rgba(255, 90, 95, 0.5); }
+        to { box-shadow: 0 0 20px rgba(255, 90, 95, 0.8); }
       }
 
       .template-studio {
@@ -543,6 +589,12 @@
         display: inline-block;
       }
 
+      .btn-pricing:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
       .urgency-timer {
         background: #e74c3c;
         color: white;
@@ -550,6 +602,12 @@
         text-align: center;
         font-weight: bold;
         font-size: 1.2em;
+        animation: flash 1s infinite alternate;
+      }
+
+      @keyframes flash {
+        from { background: #e74c3c; }
+        to { background: #c0392b; }
       }
 
       .stock-counter {
@@ -558,6 +616,7 @@
         padding: 15px;
         text-align: center;
         font-weight: bold;
+        animation: flash 1s infinite alternate;
       }
 
       /* Footer */
@@ -618,8 +677,8 @@
         }
       }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Urgency Timer -->
     <div class="urgency-timer">⏰ Offre expire dans 23h 45min - Ne laissez pas passer cette opportunité !</div>
 
@@ -638,12 +697,12 @@
         <p>Télécharge mon guide exclusif + Template Studio gratuit (Valeur 97€)</p>
         <div class="lead-form">
           <div class="form-group">
-            <input type="text" placeholder="Votre prénom" required="">
+            <input type="text" placeholder="Votre prénom" required>
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Votre email" required="">
+            <input type="email" placeholder="Votre email" required>
           </div>
-          <button class="btn-primary">🚀 TÉLÉCHARGER GRATUITEMENT</button>
+          <button class="btn-primary" onclick="window.open('https://hookmaster8.gumroad.com/l/Guide-Gratuit', '_blank')">🚀 TÉLÉCHARGER GRATUITEMENT</button>
         </div>
       </div>
     </section>
@@ -872,7 +931,7 @@
               <li>Guide de personnalisation</li>
               <li>Accès immédiat</li>
             </ul>
-            <a href="https://hookmaster8.gumroad.com/l/AirbnbTemplateStudio" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MON TEMPLATE</a>
+            <a href="https://hookmaster8.gumroad.com/l/AirbnbTemplateStudio" target="_blank" rel="noopener noreferrer" class="btn-pricing" onclick="trackPurchase('studio')">🚀 TÉLÉCHARGER MON TEMPLATE</a>
             <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 23 exemplaires</p>
           </div>
 
@@ -887,7 +946,7 @@
               <li>Checklist Super-hôte</li>
               <li>Accès immédiat</li>
             </ul>
-            <a href="https://hookmaster8.gumroad.com/l/AirbnbTemplateAppartement" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MON TEMPLATE</a>
+            <a href="https://hookmaster8.gumroad.com/l/AirbnbTemplateAppartement" target="_blank" rel="noopener noreferrer" class="btn-pricing" onclick="trackPurchase('appartement')">🚀 TÉLÉCHARGER MON TEMPLATE</a>
             <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 31 exemplaires</p>
           </div>
 
@@ -903,7 +962,7 @@
               <li>Support email 15 jours</li>
               <li>Accès immédiat</li>
             </ul>
-            <a href="https://hookmaster8.gumroad.com/l/AirbnbTemplateMaison" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MON TEMPLATE</a>
+            <a href="https://hookmaster8.gumroad.com/l/AirbnbTemplateMaison" target="_blank" rel="noopener noreferrer" class="btn-pricing" onclick="trackPurchase('maison')">🚀 TÉLÉCHARGER MON TEMPLATE</a>
             <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 18 exemplaires</p>
           </div>
 
@@ -921,7 +980,7 @@
               <li>Support email 30 jours</li>
               <li>Accès immédiat</li>
             </ul>
-            <a href="https://hookmaster8.gumroad.com/l/KitTemplateAirbnb" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MES TEMPLATES</a>
+            <a href="https://hookmaster8.gumroad.com/l/KitTemplateAirbnb" target="_blank" rel="noopener noreferrer" class="btn-pricing" onclick="trackPurchase('kit')">🚀 TÉLÉCHARGER MES TEMPLATES</a>
             <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 12 kits disponibles</p>
           </div>
         </div>
@@ -950,6 +1009,88 @@
       </div>
     </footer>
 
-    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <script>
+      // Fonction pour suivre les clics sur les boutons d'achat
+      function trackPurchase(product) {
+        console.log('Achat initié pour:', product);
+        // Vous pouvez ajouter ici du code pour le tracking analytics
+      }
+
+      // Animation du compteur de temps
+      function updateTimer() {
+        const timerElement = document.querySelector('.urgency-timer');
+        if (timerElement) {
+          const now = new Date();
+          const endTime = new Date(now.getTime() + 23 * 60 * 60 * 1000 + 45 * 60 * 1000); // 23h45min
+          const timeLeft = endTime - now;
+          
+          if (timeLeft > 0) {
+            const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            timerElement.innerHTML = `⏰ Offre expire dans ${hours}h ${minutes}min - Ne laissez pas passer cette opportunité !`;
+          }
+        }
+      }
+
+      // Mettre à jour le timer toutes les minutes
+      setInterval(updateTimer, 60000);
+
+      // Animation au scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      }, observerOptions);
+
+      // Observer les éléments animés
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.achievement-card, .metric-card, .testimonial, .pricing-card');
+        animatedElements.forEach(el => {
+          observer.observe(el);
+        });
+      });
+
+      // Gestion du formulaire lead magnet
+      document.querySelector('.btn-primary').addEventListener('click', function(e) {
+        const prenom = document.querySelector('input[type="text"]').value;
+        const email = document.querySelector('input[type="email"]').value;
+        
+        if (!prenom || !email) {
+          e.preventDefault();
+          alert('Veuillez remplir tous les champs avant de télécharger !');
+          return;
+        }
+        
+        if (!email.includes('@')) {
+          e.preventDefault();
+          alert('Veuillez entrer une adresse email valide !');
+          return;
+        }
+        
+        // Ici vous pouvez ajouter du code pour sauvegarder les informations
+        console.log('Lead capturé:', { prenom, email });
+      });
+
+      // Smooth scroll pour les ancres (si vous en ajoutez)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
 </body>
 </html>
