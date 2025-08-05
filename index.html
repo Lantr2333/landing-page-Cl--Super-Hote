@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Méthode qui m'a Rendu Super-hôte - Anthony</title>
+    <meta name="description" content="Découvrez la méthode éprouvée d'Anthony pour devenir Super-hôte Airbnb et optimiser vos réservations">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      .hero {
+        background: linear-gradient(135deg, #ff5a5f, #fc642d);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.4em;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Lead Magnet Section */
+      .lead-magnet {
+        background: linear-gradient(135deg, #00a699, #20b2aa);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .lead-magnet h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      .lead-magnet p {
+        font-size: 1.3em;
+        margin-bottom: 40px;
+      }
+
+      .lead-form {
+        max-width: 500px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1em;
+      }
+
+      .btn-primary {
+        background: #ff5a5f;
+        color: white;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.3s;
+      }
+
+      /* Profile Section */
+      .profile-section {
+        background: white;
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .profile-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        margin: 0 auto 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 3em;
+      }
+
+      .profile-section h2 {
+        font-size: 2.8em;
+        color: #333;
+        margin-bottom: 40px;
+      }
+
+      .achievements {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin: 50px 0;
+      }
+
+      .achievement-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .achievement-card:nth-child(1) {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+      }
+      .achievement-card:nth-child(2) {
+        background: linear-gradient(135deg, #f093fb, #f5576c);
+        color: white;
+      }
+      .achievement-card:nth-child(3) {
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        color: white;
+      }
+      .achievement-card:nth-child(4) {
+        background: linear-gradient(135deg, #43e97b, #38f9d7);
+        color: white;
+      }
+
+      .achievement-card h3 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
+
+      .achievement-card p {
+        font-size: 1.1em;
+      }
+
+      /* Story Section */
+      .story-intro {
+        background: #f8f9fa;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .story-intro p {
+        font-size: 1.3em;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #666;
+      }
+
+      /* Timeline */
+      .timeline {
+        background: white;
+        padding: 80px 0;
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 40px;
+        align-items: flex-start;
+      }
+
+      .timeline-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ff5a5f;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        margin-right: 30px;
+        flex-shrink: 0;
+      }
+
+      .timeline-content {
+        flex: 1;
+      }
+
+      .timeline-content h3 {
+        color: #ff5a5f;
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+
+      .timeline-content p {
+        color: #666;
+        font-size: 1.1em;
+      }
+
+      /* Formation Section */
+      .formation-section {
+        background: #f0fff0;
+        padding: 60px 0;
+      }
+
+      .formation-section h3 {
+        color: #00a699;
+        font-size: 2.2em;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .formation-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .formation-sources {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .source-item {
+        display: flex;
+        align-items: center;
+        color: #00a699;
+        font-weight: bold;
+      }
+
+      .source-item::before {
+        content: '✓';
+        background: #00a699;
+        color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 0.9em;
+      }
+
+      .key-insight {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+        border-left: 5px solid #00a699;
+      }
+
+      .key-insight h4 {
+        color: #00a699;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+      }
+
+      /* Success Story */
+      .success-story {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .success-date {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+      }
+
+      .success-date h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .success-metrics {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin: 50px 0;
+      }
+
+      .metric-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 15px;
+      }
+
+      .metric-card h4 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      /* How It Works */
+      .how-it-works {
+        background: white;
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .how-it-works h2 {
+        font-size: 3em;
+        color: #333;
+        margin-bottom: 60px;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin: 60px 0;
+      }
+
+      .step {
+        text-align: center;
+      }
+
+      .step-number {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .step:nth-child(1) .step-number {
+        background: #ff5a5f;
+      }
+      .step:nth-child(2) .step-number {
+        background: #00a699;
+      }
+      .step:nth-child(3) .step-number {
+        background: #fc642d;
+      }
+      .step:nth-child(4) .step-number {
+        background: #9b59b6;
+      }
+
+      .step h3 {
+        font-size: 1.6em;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .step p {
+        color: #666;
+        font-size: 1.1em;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        background: #f8f9fa;
+        padding: 80px 0;
+      }
+
+      .testimonials h2 {
+        font-size: 3em;
+        text-align: center;
+        color: #333;
+        margin-bottom: 60px;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+      }
+
+      .testimonial {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-text {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 25px;
+        font-style: italic;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+        color: #ff5a5f;
+        font-size: 1.1em;
+      }
+
+      /* Pricing */
+      .pricing {
+        background: white;
+        padding: 80px 0;
+      }
+
+      .pricing h2 {
+        font-size: 3em;
+        text-align: center;
+        color: #333;
+        margin-bottom: 60px;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .pricing-card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s;
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ff5a5f;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+
+      .template-studio {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+      }
+      .template-appartement {
+        background: linear-gradient(135deg, #f093fb, #f5576c);
+      }
+      .template-maison {
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+      }
+      .kit-complet {
+        background: linear-gradient(135deg, #ffa726, #ff7043);
+        color: #2c3e50;
+      }
+
+      .pricing-card h3 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        color: inherit;
+      }
+
+      .pricing-card .price {
+        font-size: 3em;
+        font-weight: bold;
+        margin: 20px 0;
+        color: inherit;
+      }
+
+      .pricing-card .original-price {
+        text-decoration: line-through;
+        font-size: 1.2em;
+        opacity: 0.8;
+        margin-bottom: 10px;
+      }
+
+      .pricing-card .savings {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        color: inherit;
+      }
+
+      .pricing-card ul {
+        list-style: none;
+        margin: 30px 0;
+      }
+
+      .pricing-card li {
+        margin: 15px 0;
+        padding-left: 25px;
+        position: relative;
+        color: inherit;
+      }
+
+      .pricing-card li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: inherit;
+        font-weight: bold;
+      }
+
+      .btn-pricing {
+        background: rgba(255, 255, 255, 0.2);
+        color: inherit;
+        padding: 15px 30px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .urgency-timer {
+        background: #e74c3c;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .stock-counter {
+        background: #f39c12;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      /* Footer */
+      .footer {
+        background: #2c3e50;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .footer p {
+        font-size: 1.1em;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5em;
+        }
+
+        .hero p {
+          font-size: 1.2em;
+        }
+
+        .lead-magnet h2 {
+          font-size: 2em;
+        }
+
+        .profile-section h2 {
+          font-size: 2.2em;
+        }
+
+        .how-it-works h2,
+        .testimonials h2,
+        .pricing h2 {
+          font-size: 2.2em;
+        }
+
+        .achievements {
+          grid-template-columns: 1fr;
+        }
+
+        .steps {
+          grid-template-columns: 1fr;
+        }
+
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .timeline-icon {
+          margin: 0 auto 20px;
+        }
+      }
+    </style>
+    <script src="https://assets.gumroad.com/packs/js/overlay-f8f9015a9aabefa09736.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-86f2b5bd.css">
+  <script src="https://assets.gumroad.com/packs/js/overlay-f8f9015a9aabefa09736.js" charset="utf-8"></script><link rel="stylesheet" href="https://assets.gumroad.com/packs/css/overlay-86f2b5bd.css"></head>
+  <body style="">
+    <!-- Urgency Timer -->
+    <div class="urgency-timer">⏰ Offre expire dans 23h 45min - Ne laissez pas passer cette opportunité !</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>La Méthode qui m'a Rendu Super-hôte</h1>
+        <p>La méthode express qui m'a rendu Super-hôte en 3 mois chrono</p>
+      </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet">
+      <div class="container">
+        <h2>🎁 BONUS GRATUIT : Guide "5 Erreurs qui Tuent vos Réservations Airbnb"</h2>
+        <p>Télécharge mon guide exclusif + Template Studio gratuit (Valeur 97€)</p>
+        <div class="lead-form">
+          <div class="form-group">
+            <input type="text" placeholder="Votre prénom" required="">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Votre email" required="">
+          </div>
+          <button class="btn-primary">🚀 TÉLÉCHARGER GRATUITEMENT</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+      <div class="container">
+        <div class="profile-avatar">A</div>
+        <h2>Hello, moi c'est Anthony !</h2>
+
+        <div class="achievements">
+          <div class="achievement-card">
+            <h3>3 mois</h3>
+            <p>Pour obtenir le badge Super-hôte</p>
+          </div>
+          <div class="achievement-card">
+            <h3>Dès le début</h3>
+            <p>Logement "Coup de cœur voyageur"</p>
+          </div>
+          <div class="achievement-card">
+            <h3>2 ans</h3>
+            <p>Badge Super-hôte conservé sans interruption</p>
+          </div>
+          <div class="achievement-card">
+            <h3>Méthode</h3>
+            <p>Éprouvée</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Introduction -->
+    <section class="story-intro">
+      <div class="container">
+        <p>
+          Et si on m'avait dit il y a 2 ans que je deviendrais un propriétaire Airbnb rentable grâce à l'opportunité des
+          JO 2024, je n'y aurais jamais cru.
+        </p>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline">
+      <div class="container">
+        <div class="timeline-item">
+          <div class="timeline-icon">💡</div>
+          <div class="timeline-content">
+            <h3>Juin 2023 - La Vision JO</h3>
+            <p>
+              L'idée me vient : et si je profitais des JO 2024 pour me lancer dans l'Airbnb ? Paris va exploser, c'est
+              l'opportunité de ma vie.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">⏱️</div>
+          <div class="timeline-content">
+            <h3>La course contre la montre commence</h3>
+            <p>
+              <strong>Août 2023 :</strong> J'achète un 2 pièces en Île-de-France. Les négociations sont tendues (merci
+              la hausse des taux !), mais le deal se fait.
+            </p>
+            <p>
+              <strong>Septembre 2023 :</strong> 4 semaines chrono pour rénover et isoler aux normes. L'entrepreneur
+              bosse jour et nuit. La pression est énorme.
+            </p>
+            <p>
+              <strong>Octobre 2023 :</strong> Plus le droit à l'erreur. Il me faut une annonce qui convertit dès le
+              premier jour.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section class="formation-section">
+      <div class="container">
+        <h3>🎓 Formation express intensive</h3>
+        <div class="formation-content">
+          <p>Pendant que les travaux avançaient, je dévorais tout ce qui existait sur l'optimisation Airbnb :</p>
+
+          <div class="formation-sources">
+            <div class="source-item">Groupes Facebook d'entraide officiels Airbnb</div>
+            <div class="source-item">Communautés de propriétaires experts</div>
+            <div class="source-item">Forums de conciergeries spécialisées</div>
+            <div class="source-item">Guides et ressources spécialisés en ligne</div>
+            <div class="source-item">Documentations officielles Airbnb</div>
+          </div>
+
+          <div class="key-insight">
+            <h4>
+              Mais surtout, j'ai analysé des dizaines d'annonces top performers pour comprendre ce qui marche vraiment.
+            </h4>
+            <p><strong>Le déclic ? Les mots ont plus d'impact que les photos.</strong></p>
+            <p style="font-style: italic; margin-top: 15px">
+              Une annonce bien rédigée peut transformer un logement banal en refuge irrésistible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Story -->
+    <section class="success-story">
+      <div class="container">
+        <div class="success-date">
+          <h3>📅 14 octobre 2023 : Jour J</h3>
+          <p><strong>16h30 :</strong> Je publie mon annonce avec ma formule optimisée.</p>
+          <p><strong>11h45 le lendemain : PREMIÈRE RÉSERVATION !</strong></p>
+          <p style="font-style: italic; color: #ffd700; font-size: 1.3em; margin-top: 15px">
+            Mon cœur explose. Ça marche !
+          </p>
+          <p>Mais ce n'était que le début...</p>
+        </div>
+
+        <h3>🏆 Les résultats parlent d'eux-mêmes</h3>
+        <div class="success-metrics">
+          <div class="metric-card">
+            <h4>⚡ 3 mois plus tard</h4>
+            <p>Badge Super-hôte obtenu ✅</p>
+          </div>
+          <div class="metric-card">
+            <h4>📊 Taux d'occupation</h4>
+            <p>80% en moyenne ✅</p>
+          </div>
+          <div class="metric-card">
+            <h4>❤️ Badge "Coup de cœur voyageur"</h4>
+            <p>Maintenu depuis le début ✅</p>
+          </div>
+          <div class="metric-card">
+            <h4>⭐ Commentaires clients</h4>
+            <p>"Hôte super réactif, annonce conforme, service impeccable" ✅</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 50px; padding: 30px; background: rgba(255, 255, 255, 0.1); border-radius: 15px">
+          <h3>🎯 Le twist des JO (que personne ne raconte)</h3>
+          <p style="font-size: 1.2em; margin-bottom: 15px">
+            Ironie du sort : <strong>pendant les JO 2024, Airbnb était au plus bas.</strong>
+          </p>
+          <p>
+            Mais ma préparation express m'avait appris à m'adapter. Un ancien client m'a recontacté directement, j'ai
+            appliqué +20% sur mes tarifs, et j'ai maintenu mon occupation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2>Comment ça marche ?</h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Choisis</h3>
+            <p>Sélectionne le template correspondant à ton type de logement (Studio/Appartement/Maison)</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Remplace</h3>
+            <p>Remplace les [CROCHETS] par tes informations personnelles</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Copie-colle</h3>
+            <p>Colle ton annonce Airbnb directement dans ton annonce</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Regarde</h3>
+            <p>Tes réservations exploser !</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>Ce que disent mes clients</h2>
+
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "Grâce aux templates d'Anthony, j'ai eu 15 réservations le premier mois ! Incroyable efficacité."
+            </p>
+            <p class="testimonial-author">- Marie, Paris</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "Super-hôte en 2 mois avec ses méthodes. Ses templates sont vraiment différents de ce qu'on trouve
+              ailleurs."
+            </p>
+            <p class="testimonial-author">- Thomas, Lyon</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "Mes revenus Airbnb ont doublé après avoir appliqué sa méthode. Merci Anthony !"
+            </p>
+            <p class="testimonial-author">- Sophie, Marseille</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stock Counter -->
+    <div class="stock-counter">📦 Plus que 47 kits disponibles - Stock limité !</div>
+
+    <!-- Pricing -->
+    <section class="pricing">
+      <div class="container">
+        <h2>Transforme ton Airbnb maintenant</h2>
+
+        <div class="pricing-grid">
+          <div class="pricing-card template-studio">
+            <div class="pricing-badge">OFFRE LIMITÉE</div>
+            <h3>Template Studio</h3>
+            <div class="price">19€</div>
+            <p class="savings">Prix de lancement</p>
+            <ul>
+              <li>Template Studio optimisé</li>
+              <li>Guide de personnalisation</li>
+              <li>Accès immédiat</li>
+            </ul>
+            <a href="https://gum.co/template-studio-airbnb" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MON TEMPLATE</a>
+            <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 23 exemplaires</p>
+          </div>
+
+          <div class="pricing-card template-appartement">
+            <div class="pricing-badge">OFFRE LIMITÉE</div>
+            <h3>Template Appartement</h3>
+            <div class="price">29€</div>
+            <p class="savings">Prix de lancement</p>
+            <ul>
+              <li>Template Appartement optimisé</li>
+              <li>Guide de personnalisation</li>
+              <li>Checklist Super-hôte</li>
+              <li>Accès immédiat</li>
+            </ul>
+            <a href="https://gum.co/template-appartement-airbnb" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MON TEMPLATE</a>
+            <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 31 exemplaires</p>
+          </div>
+
+          <div class="pricing-card template-maison">
+            <div class="pricing-badge">OFFRE LIMITÉE</div>
+            <h3>Template Maison</h3>
+            <div class="price">39€</div>
+            <p class="savings">Prix de lancement</p>
+            <ul>
+              <li>Template Maison optimisé</li>
+              <li>Guide de personnalisation</li>
+              <li>Checklist Super-hôte</li>
+              <li>Support email 15 jours</li>
+              <li>Accès immédiat</li>
+            </ul>
+            <a href="https://gum.co/template-maison-airbnb" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MON TEMPLATE</a>
+            <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 18 exemplaires</p>
+          </div>
+
+          <div class="pricing-card kit-complet">
+            <div class="pricing-badge" style="background: #e74c3c">⭐ PLUS POPULAIRE</div>
+            <h3>Kit Complet</h3>
+            <p>Les 3 templates + Bonus exclusifs</p>
+            <div class="price">67€</div>
+            <p class="original-price">au lieu de 87€</p>
+            <p class="savings">ÉCONOMISEZ 20€</p>
+            <ul>
+              <li>3 Templates optimisés</li>
+              <li>Guide de personnalisation</li>
+              <li>Checklist Super-hôte</li>
+              <li>Support email 30 jours</li>
+              <li>Accès immédiat</li>
+            </ul>
+            <a href="https://gum.co/kit-complet-airbnb" data-gumroad-single-product="true" class="btn-pricing">🚀 TÉLÉCHARGER MES TEMPLATES</a>
+            <p style="margin-top: 15px; font-size: 0.9em">⏰ Plus que 12 kits disponibles</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: #f8f9fa; border-radius: 15px">
+          <p>🔒 Paiement 100% sécurisé • ⚡ Téléchargement immédiat • ✅ Accès à vie</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section style="background: linear-gradient(135deg, #ff5a5f, #fc642d); color: white; padding: 60px 0; text-align: center">
+      <div class="container">
+        <h2 style="font-size: 2.5em; margin-bottom: 30px">
+          « Le succès, c'est 1% d'inspiration et 99% de transpiration... et de bons outils ! »
+        </h2>
+        <p style="font-size: 1.5em; font-weight: bold">— Anthony, Super-hôte depuis 2 ans</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2024 Anthony - Super-hôte depuis 2 ans</p>
+        <p style="margin-top: 10px; color: #95a5a6">Méthode éprouvée</p>
+      </div>
+    </footer>
+
+    <script src="https://gumroad.com/js/gumroad.js" data-styles-url="https://assets.gumroad.com/packs/css/design-716d37f0.css"></script>
+  
+
+<div style="z-index: 999999; position: absolute;"></div><div style="z-index: 999999; position: absolute;"></div><div style="z-index: 999999; position: absolute;"></div></body></html>
