@@ -60,6 +60,67 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+# Gumroad endpoints
+@api_router.get("/gumroad/test")
+async def test_gumroad_connection():
+    """Test connection to Gumroad API"""
+    return await gumroad_service.test_connection()
+
+@api_router.get("/gumroad/products", response_model=List[GumroadProduct])
+async def get_gumroad_products():
+    """Get all products from Gumroad"""
+    try:
+        return await gumroad_service.get_products()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Erreur lors de la récupération des produits: {str(e)}")
+
+@api_router.get("/gumroad/products/{product_id}", response_model=GumroadProduct)
+async def get_gumroad_product(product_id: str):
+    """Get a specific product from Gumroad"""
+    return await gumroad_service.get_product(product_id)
+
+@api_router.post("/gumroad/verify-license")
+async def verify_license(request: LicenseVerificationRequest):
+    """Verify a license key"""
+    return await gumroad_service.verify_license(request.license_key, request.permalink)
+
+@api_router.post("/gumroad/create-products")
+async def create_default_products():
+    """Create the 4 default Airbnb template products"""
+    default_products = [
+        {
+            "name": "Template Studio - Super-hôte",
+            "price": 19.0,
+            "description": "Template professionnel optimisé pour studio Airbnb. Augmentez vos réservations avec une annonce qui convertit !"
+        },
+        {
+            "name": "Template Appartement - Super-hôte",
+            "price": 29.0,
+            "description": "Template professionnel optimisé pour appartement Airbnb. Maximisez votre taux d'occupation avec une description parfaite !"
+        },
+        {
+            "name": "Template Maison - Super-hôte",
+            "price": 39.0,
+            "description": "Template professionnel optimisé pour maison Airbnb. Attirez plus de voyageurs avec une annonce irrésistible !"
+        },
+        {
+            "name": "Kit Complet Super-hôte",
+            "price": 67.0,
+            "description": "Kit complet avec les 3 templates + guides bonus. Tout ce dont vous avez besoin pour devenir Super-hôte rapidement !"
+        }
+    ]
+    
+    results = []
+    for product_data in default_products:
+        result = await gumroad_service.create_product(
+            product_data["name"],
+            product_data["price"],
+            product_data["description"]
+        )
+        results.append(result)
+    
+    return {"products_created": results}
+
 # Include the router in the main app
 app.include_router(api_router)
 
