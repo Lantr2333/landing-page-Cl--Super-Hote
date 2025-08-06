@@ -39,6 +39,10 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class LicenseVerificationRequest(BaseModel):
+    license_key: str
+    permalink: str
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
