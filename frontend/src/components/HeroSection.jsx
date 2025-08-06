@@ -9,6 +9,10 @@ import {
   Gift,
   Clock
 } from "lucide-react";
+import axios from "axios";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 23, minutes: 45 });
