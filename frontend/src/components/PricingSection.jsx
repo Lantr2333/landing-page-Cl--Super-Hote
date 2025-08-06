@@ -157,13 +157,13 @@ const PricingSection = () => {
 
         {/* Pricing Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {pricing.map((plan, index) => {
-            const badge = getBadgeInfo(plan);
-            const isHighlighted = plan.bestValue || plan.recommended;
+          {products.filter(product => product.price !== "0€").map((product, index) => {
+            const badge = getBadgeInfo(product);
+            const isHighlighted = product.bestValue || product.recommended;
             
             return (
               <Card
-                key={plan.id}
+                key={product.id}
                 className={`relative h-full transition-all duration-300 hover:shadow-xl ${
                   isHighlighted
                     ? "border-3 border-emerald-300 shadow-lg scale-105"
@@ -177,27 +177,17 @@ const PricingSection = () => {
                 )}
                 
                 <CardHeader className="text-center p-6">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{product.name.split(' - ')[0]}</h3>
                   <div className="mb-2">
-                    {plan.originalPrice && (
-                      <span className="text-lg text-slate-500 line-through mr-2">
-                        {plan.originalPrice}
-                      </span>
-                    )}
-                    <span className="text-3xl font-bold text-emerald-600">{plan.price}</span>
+                    <span className="text-3xl font-bold text-emerald-600">{product.price}</span>
                   </div>
-                  {plan.savings && (
-                    <div className="text-sm font-semibold text-orange-600 bg-orange-100 px-2 py-1 rounded">
-                      {plan.savings}
-                    </div>
-                  )}
-                  <p className="text-slate-600 text-sm">{plan.description}</p>
+                  <p className="text-slate-600 text-sm">{product.description}</p>
                 </CardHeader>
 
                 <CardContent className="p-6 pt-0 flex-1 flex flex-col">
                   {/* Features */}
                   <ul className="space-y-3 mb-6 flex-1">
-                    {plan.features.map((feature, featureIndex) => (
+                    {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start space-x-2">
                         <Check className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
                         <span className="text-slate-600 text-sm">{feature}</span>
@@ -210,32 +200,34 @@ const PricingSection = () => {
                     <div className="flex items-center justify-between text-sm mb-2">
                       <span className="text-slate-600">Disponible:</span>
                       <span className="font-semibold text-orange-600">
-                        Plus que {plan.remaining} exemplaires
+                        Plus que {product.remaining} exemplaires
                       </span>
                     </div>
                     <div className="w-full bg-slate-200 rounded-full h-2">
                       <div
                         className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full"
-                        style={{ width: `${Math.max(20, (plan.remaining / 50) * 100)}%` }}
+                        style={{ width: `${Math.max(20, (product.remaining / 50) * 100)}%` }}
                       ></div>
                     </div>
                   </div>
 
                   {/* CTA Button */}
                   <Button
+                    onClick={() => handlePurchase(product)}
                     className={`w-full ${
                       isHighlighted
                         ? "bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700"
                         : "bg-emerald-600 text-white hover:bg-emerald-700"
                     }`}
                   >
-                    {plan.bestValue ? "Accéder à mes Templates" : "Télécharger mon Template"}
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    {product.bestValue ? "Accéder à mes Templates" : "Acheter Maintenant"}
                   </Button>
 
                   {/* Urgency Indicator */}
                   <div className="flex items-center justify-center mt-3 text-xs text-slate-500">
                     <Clock className="h-3 w-3 mr-1" />
-                    <span>Accès immédiat</span>
+                    <span>Téléchargement immédiat</span>
                   </div>
                 </CardContent>
               </Card>
