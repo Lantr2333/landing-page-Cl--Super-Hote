@@ -126,14 +126,6 @@ const PricingSection = () => {
     );
   }
 
-  const getBadgeInfo = (plan) => {
-    if (plan.popular) return { text: "POPULAIRE", className: "bg-blue-500" };
-    if (plan.recommended) return { text: "RECOMMANDÉ", className: "bg-emerald-500" };
-    if (plan.premium) return { text: "PREMIUM", className: "bg-purple-500" };
-    if (plan.bestValue) return { text: "MEILLEURE VALEUR", className: "bg-gradient-to-r from-orange-500 to-red-500" };
-    return null;
-  };
-
   return (
     <section id="pricing" className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
