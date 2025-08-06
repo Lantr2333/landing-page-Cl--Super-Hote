@@ -72,33 +72,33 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <a
                 href="#about"
-                className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+                className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 À propos
               </a>
               <a
                 href="#features"
-                className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+                className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Méthode
               </a>
               <a
                 href="#testimonials"
-                className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+                className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Témoignages
               </a>
               <a
                 href="#pricing"
-                className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+                className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Templates
               </a>
-              <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700">
+              <Button className="bg-gradient-to-r from-orange-600 to-amber-600 text-white hover:from-orange-700 hover:to-amber-700">
                 Commencer
               </Button>
             </div>
