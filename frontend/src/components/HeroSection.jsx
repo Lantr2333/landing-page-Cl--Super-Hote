@@ -16,6 +16,8 @@ const API = `${BACKEND_URL}/api`;
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 23, minutes: 45 });
+  const [freeGuide, setFreeGuide] = useState(null);
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -29,8 +31,43 @@ const HeroSection = () => {
       });
     }, 60000);
 
+    fetchFreeGuide();
+    loadGumroadScript();
+
     return () => clearInterval(timer);
   }, []);
+
+  const fetchFreeGuide = async () => {
+    try {
+      const response = await axios.get(`${API}/gumroad/products`);
+      const guide = response.data.find(product => product.price === 0);
+      setFreeGuide(guide);
+    } catch (error) {
+      console.error('Error fetching free guide:', error);
+    }
+  };
+
+  const loadGumroadScript = () => {
+    if (!window.GumroadOverlay) {
+      const script = document.createElement('script');
+      script.src = 'https://gumroad.com/js/gumroad.js';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  };
+
+  const handleFreeDownload = () => {
+    if (freeGuide) {
+      if (window.GumroadOverlay) {
+        window.GumroadOverlay.open({
+          url: freeGuide.short_url,
+          wanted: true
+        });
+      } else {
+        window.open(freeGuide.short_url, '_blank');
+      }
+    }
+  };
 
   const stats = [
     { icon: TrendingUp, value: "500+", label: "Hôtes accompagnés" },
