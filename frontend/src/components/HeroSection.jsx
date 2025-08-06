@@ -161,9 +161,14 @@ const HeroSection = () => {
                   <input 
                     type="email" 
                     placeholder="Votre adresse email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   />
-                  <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700 py-3">
+                  <Button 
+                    onClick={handleFreeDownload}
+                    className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700 py-3"
+                  >
                     🚀 Télécharger Gratuitement
                   </Button>
                 </div>
