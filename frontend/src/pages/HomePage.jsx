@@ -5,6 +5,7 @@ import AboutSection from "../components/AboutSection";
 import FeaturesSection from "../components/FeaturesSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import PricingSection from "../components/PricingSection";
+import LicenseVerification from "../components/LicenseVerification";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
