@@ -23,29 +23,29 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#about"
-              className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+              className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
             >
               À propos
             </a>
             <a
               href="#features"
-              className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+              className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
             >
               Méthode
             </a>
             <a
               href="#testimonials"
-              className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+              className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
             >
               Témoignages
             </a>
             <a
               href="#pricing"
-              className="text-slate-600 hover:text-emerald-600 font-medium transition-colors"
+              className="text-slate-600 hover:text-orange-600 font-medium transition-colors"
             >
               Templates
             </a>
-            <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700">
+            <Button className="bg-gradient-to-r from-orange-600 to-amber-600 text-white hover:from-orange-700 hover:to-amber-700">
               Commencer
             </Button>
           </div>
