@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Button } from "./ui/button";
-import { Check, Clock, Star, Zap } from "lucide-react";
-import { mockData } from "../mock/mockData";
+import { Check, Clock, Star, Zap, ExternalLink } from "lucide-react";
+import axios from "axios";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const PricingSection = () => {
   const { pricing } = mockData;
