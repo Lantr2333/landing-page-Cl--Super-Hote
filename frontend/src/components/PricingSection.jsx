@@ -9,7 +9,122 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const PricingSection = () => {
-  const { pricing } = mockData;
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetchGumroadProducts();
+    loadGumroadScript();
+  }, []);
+
+  const fetchGumroadProducts = async () => {
+    try {
+      const response = await axios.get(`${API}/gumroad/products`);
+      // Filter and map products to match our pricing structure
+      const mappedProducts = response.data.map(product => ({
+        id: product.id,
+        name: product.name,
+        price: product.formatted_price,
+        originalPrice: null,
+        description: extractDescription(product.description),
+        features: extractFeatures(product.description),
+        short_url: product.short_url,
+        preview_url: product.preview_url,
+        remaining: Math.floor(Math.random() * 50) + 10, // Mock remaining stock
+        popular: product.name.toLowerCase().includes('studio'),
+        recommended: product.name.toLowerCase().includes('appartement'),
+        premium: product.name.toLowerCase().includes('maison'),
+        bestValue: product.name.toLowerCase().includes('kit')
+      }));
+      
+      setProducts(mappedProducts);
+      setLoading(false);
+    } catch (err) {
+      console.error('Error fetching Gumroad products:', err);
+      setError('Erreur lors du chargement des produits');
+      setLoading(false);
+    }
+  };
+
+  const loadGumroadScript = () => {
+    if (!window.GumroadOverlay) {
+      const script = document.createElement('script');
+      script.src = 'https://gumroad.com/js/gumroad.js';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  };
+
+  const extractDescription = (htmlDescription) => {
+    // Extract clean description from HTML
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = htmlDescription;
+    const text = tempDiv.textContent || tempDiv.innerText || '';
+    return text.split('.')[0] + '.'; // Take first sentence
+  };
+
+  const extractFeatures = (htmlDescription) => {
+    // Extract features from description
+    const features = [];
+    if (htmlDescription.includes('Studio')) {
+      features.push("Template Studio optimisé", "Guide de personnalisation", "Accès immédiat");
+    } else if (htmlDescription.includes('Appartement')) {
+      features.push("Template Appartement optimisé", "Guide de personnalisation", "Checklist Super-hôte", "Accès immédiat");
+    } else if (htmlDescription.includes('Maison')) {
+      features.push("Template Maison optimisé", "Guide de personnalisation", "Checklist Super-hôte", "Support email 15 jours", "Accès immédiat");
+    } else if (htmlDescription.includes('Kit')) {
+      features.push("3 Templates optimisés", "Guide de personnalisation", "Checklist Super-hôte", "Support email 30 jours", "Accès immédiat");
+    } else {
+      features.push("Template optimisé", "Guide inclus", "Support disponible");
+    }
+    return features;
+  };
+
+  const handlePurchase = (product) => {
+    if (window.GumroadOverlay) {
+      window.GumroadOverlay.open({
+        url: product.short_url,
+        wanted: true
+      });
+    } else {
+      // Fallback to direct link
+      window.open(product.short_url, '_blank');
+    }
+  };
+
+  const getBadgeInfo = (product) => {
+    if (product.popular) return { text: "POPULAIRE", className: "bg-blue-500" };
+    if (product.recommended) return { text: "RECOMMANDÉ", className: "bg-emerald-500" };
+    if (product.premium) return { text: "PREMIUM", className: "bg-purple-500" };
+    if (product.bestValue) return { text: "MEILLEURE VALEUR", className: "bg-gradient-to-r from-orange-500 to-red-500" };
+    return null;
+  };
+
+  if (loading) {
+    return (
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto"></div>
+            <p className="mt-4 text-slate-600">Chargement des templates...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-red-600">{error}</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const getBadgeInfo = (plan) => {
     if (plan.popular) return { text: "POPULAIRE", className: "bg-blue-500" };
