@@ -18,6 +18,7 @@ const HomePage = () => {
       <FeaturesSection />
       <TestimonialsSection />
       <PricingSection />
+      <LicenseVerification />
       <ContactSection />
       <Footer />
     </div>
