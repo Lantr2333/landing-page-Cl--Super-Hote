@@ -181,7 +181,7 @@ const PricingSection = () => {
                   <ul className="space-y-3 mb-6 flex-1">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start space-x-2">
-                        <Check className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
                         <span className="text-slate-600 text-sm">{feature}</span>
                       </li>
                     ))}
