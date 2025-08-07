@@ -95,9 +95,9 @@ const PricingSection = () => {
 
   const getBadgeInfo = (product) => {
     if (product.popular) return { text: "POPULAIRE", className: "bg-blue-500" };
-    if (product.recommended) return { text: "RECOMMANDÉ", className: "bg-emerald-500" };
+    if (product.recommended) return { text: "RECOMMANDÉ", className: "bg-orange-500" };
     if (product.premium) return { text: "PREMIUM", className: "bg-purple-500" };
-    if (product.bestValue) return { text: "MEILLEURE VALEUR", className: "bg-gradient-to-r from-orange-500 to-red-500" };
+    if (product.bestValue) return { text: "MEILLEURE VALEUR", className: "bg-gradient-to-r from-red-500 to-orange-500" };
     return null;
   };
 
