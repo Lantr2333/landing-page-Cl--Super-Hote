@@ -131,12 +131,12 @@ const TestimonialsSection = () => {
                 </p>
                 
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-orange-600 to-amber-600 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
                     {testimonial.name[0]}
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900">{testimonial.name}</div>
-                    <div className="text-sm text-emerald-600">{testimonial.location}</div>
+                    <div className="text-sm text-orange-600">{testimonial.location}</div>
                   </div>
                 </div>
               </CardContent>
