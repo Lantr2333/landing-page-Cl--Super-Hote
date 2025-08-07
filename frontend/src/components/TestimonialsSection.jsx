@@ -96,8 +96,8 @@ const TestimonialsSection = () => {
               key={index}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentIndex
-                  ? "bg-emerald-600"
-                  : "bg-slate-300 hover:bg-emerald-300"
+                  ? "bg-orange-600"
+                  : "bg-slate-300 hover:bg-orange-300"
               }`}
               onClick={() => setCurrentIndex(index)}
             />
