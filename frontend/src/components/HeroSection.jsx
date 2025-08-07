@@ -112,14 +112,14 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700 text-lg px-8 py-4"
+                className="bg-gradient-to-r from-orange-600 to-amber-600 text-white hover:from-orange-700 hover:to-amber-700 text-lg px-8 py-4"
               >
                 Découvrir la Méthode
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 text-lg px-8 py-4"
+                className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 text-lg px-8 py-4"
               >
                 Voir les Témoignages
               </Button>
