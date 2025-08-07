@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
           <Button
             variant="outline"
             size="sm"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full border-2 border-emerald-200 hover:bg-emerald-50"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full border-2 border-orange-200 hover:bg-orange-50"
             onClick={prevTestimonial}
           >
             <ChevronLeft className="h-6 w-6" />
@@ -82,7 +82,7 @@ const TestimonialsSection = () => {
           <Button
             variant="outline"
             size="sm"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full border-2 border-emerald-200 hover:bg-emerald-50"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full border-2 border-orange-200 hover:bg-orange-50"
             onClick={nextTestimonial}
           >
             <ChevronRight className="h-6 w-6" />
