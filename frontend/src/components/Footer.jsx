@@ -34,27 +34,27 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Navigation</h4>
             <ul className="space-y-2 text-slate-300">
               <li>
-                <a href="#about" className="hover:text-emerald-400 transition-colors">
+                <a href="#about" className="hover:text-orange-400 transition-colors">
                   À propos d'Anthony
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-emerald-400 transition-colors">
+                <a href="#features" className="hover:text-orange-400 transition-colors">
                   La Méthode
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-emerald-400 transition-colors">
+                <a href="#testimonials" className="hover:text-orange-400 transition-colors">
                   Témoignages
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-emerald-400 transition-colors">
+                <a href="#pricing" className="hover:text-orange-400 transition-colors">
                   Templates & Prix
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-emerald-400 transition-colors">
+                <a href="#contact" className="hover:text-orange-400 transition-colors">
                   Contact & Support
                 </a>
               </li>
