@@ -98,20 +98,20 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Contact & Support</h4>
             <ul className="space-y-3 text-slate-300">
               <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-emerald-400" />
+                <Mail className="h-4 w-4 text-orange-400" />
                 <a 
                   href="mailto:anthony@superhote-methode.fr"
-                  className="hover:text-emerald-400 transition-colors"
+                  className="hover:text-orange-400 transition-colors"
                 >
                   anthony@superhote-methode.fr
                 </a>
               </li>
               <li className="flex items-center space-x-2">
-                <MessageCircle className="h-4 w-4 text-emerald-400" />
+                <MessageCircle className="h-4 w-4 text-orange-400" />
                 <span>Support 9h-18h (Lun-Ven)</span>
               </li>
               <li className="flex items-center space-x-2">
-                <Shield className="h-4 w-4 text-emerald-400" />
+                <Shield className="h-4 w-4 text-orange-400" />
                 <span>Paiement 100% sécurisé</span>
               </li>
             </ul>
