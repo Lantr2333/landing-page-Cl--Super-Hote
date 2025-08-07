@@ -19,7 +19,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 px-4 py-2 text-sm font-medium mb-4">
+          <Badge className="bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 px-4 py-2 text-sm font-medium mb-4">
             À PROPOS DE VOTRE EXPERT
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -34,7 +34,7 @@ const AboutSection = () => {
           {/* Left: Profile Image and Stats */}
           <div className="space-y-8">
             <div className="relative">
-              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
+              <div className="w-32 h-32 mx-auto bg-gradient-to-r from-orange-600 to-amber-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
                 A
               </div>
               <div className="absolute -top-2 -right-2 bg-yellow-400 p-2 rounded-full">
@@ -48,9 +48,9 @@ const AboutSection = () => {
                 const icons = [Calendar, Star, Award, Users];
                 const Icon = icons[index % icons.length];
                 return (
-                  <Card key={index} className="border-2 border-slate-100 hover:border-emerald-200 transition-colors">
+                  <Card key={index} className="border-2 border-slate-100 hover:border-orange-200 transition-colors">
                     <CardContent className="p-4 text-center">
-                      <Icon className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
+                      <Icon className="h-8 w-8 text-orange-600 mx-auto mb-2" />
                       <div className="text-2xl font-bold text-slate-900">{achievement.value}</div>
                       <div className="text-sm text-slate-600">{achievement.label}</div>
                     </CardContent>
@@ -66,22 +66,22 @@ const AboutSection = () => {
             
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 to-teal-500"></div>
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-500 to-amber-500"></div>
               
               <div className="space-y-8">
                 {timeline.map((event, index) => (
                   <div key={index} className="relative flex items-start">
                     {/* Timeline Dot */}
                     <div className="relative z-10">
-                      <div className="w-8 h-8 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-orange-600 to-amber-600 rounded-full flex items-center justify-center">
                         <CheckCircle className="h-4 w-4 text-white" />
                       </div>
                     </div>
                     
                     {/* Content */}
                     <div className="ml-6 flex-1">
-                      <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-lg border border-emerald-100">
-                        <div className="text-sm font-medium text-emerald-600 mb-1">{event.date}</div>
+                      <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-lg border border-orange-100">
+                        <div className="text-sm font-medium text-orange-600 mb-1">{event.date}</div>
                         <h4 className="text-lg font-semibold text-slate-900 mb-2">{event.title}</h4>
                         <p className="text-slate-600">{event.description}</p>
                       </div>
@@ -95,10 +95,10 @@ const AboutSection = () => {
 
         {/* Key Discovery */}
         <div className="mt-16">
-          <Card className="bg-gradient-to-r from-emerald-50 to-teal-50 border-2 border-emerald-200">
+          <Card className="bg-gradient-to-r from-orange-50 to-amber-50 border-2 border-orange-200">
             <CardContent className="p-8">
               <div className="text-center">
-                <TrendingUp className="h-12 w-12 text-emerald-600 mx-auto mb-4" />
+                <TrendingUp className="h-12 w-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   Le déclic qui a tout changé : l'analyse comportementale des voyageurs
                 </h3>
