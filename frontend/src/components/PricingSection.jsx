@@ -208,8 +208,8 @@ const PricingSection = () => {
                     onClick={() => handlePurchase(product)}
                     className={`w-full ${
                       isHighlighted
-                        ? "bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700"
-                        : "bg-emerald-600 text-white hover:bg-emerald-700"
+                        ? "bg-gradient-to-r from-orange-600 to-amber-600 text-white hover:from-orange-700 hover:to-amber-700"
+                        : "bg-orange-600 text-white hover:bg-orange-700"
                     }`}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
