@@ -130,7 +130,7 @@ const HeroSection = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-2">
-                    <stat.icon className="h-6 w-6 text-emerald-600" />
+                    <stat.icon className="h-6 w-6 text-orange-600" />
                   </div>
                   <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
                   <div className="text-sm text-slate-600">{stat.label}</div>
