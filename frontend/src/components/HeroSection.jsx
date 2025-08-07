@@ -94,7 +94,7 @@ const HeroSection = () => {
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 La Méthode{" "}
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                   Éprouvée
                 </span>{" "}
                 pour Devenir Super-hôte
