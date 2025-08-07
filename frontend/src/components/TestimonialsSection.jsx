@@ -123,7 +123,7 @@ const TestimonialsSection = () => {
                       <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <Quote className="h-6 w-6 text-emerald-600" />
+                  <Quote className="h-6 w-6 text-orange-600" />
                 </div>
                 
                 <p className="text-slate-700 mb-4 line-clamp-3">
