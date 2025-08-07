@@ -111,8 +111,8 @@ const TestimonialsSection = () => {
               key={index}
               className={`border-2 transition-all duration-300 cursor-pointer ${
                 index === currentIndex
-                  ? "border-emerald-300 bg-emerald-50"
-                  : "border-slate-100 hover:border-emerald-200 bg-white"
+                  ? "border-orange-300 bg-orange-50"
+                  : "border-slate-100 hover:border-orange-200 bg-white"
               }`}
               onClick={() => setCurrentIndex(index)}
             >
