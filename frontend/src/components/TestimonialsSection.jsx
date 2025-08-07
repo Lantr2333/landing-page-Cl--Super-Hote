@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
                   <div className="text-lg font-semibold text-slate-900">
                     {testimonials[currentIndex].name}
                   </div>
-                  <div className="text-emerald-600">{testimonials[currentIndex].location}</div>
+                  <div className="text-orange-600">{testimonials[currentIndex].location}</div>
                 </div>
               </div>
             </CardContent>
