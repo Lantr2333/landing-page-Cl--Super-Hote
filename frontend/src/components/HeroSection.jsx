@@ -167,7 +167,7 @@ const HeroSection = () => {
                   />
                   <Button 
                     onClick={handleFreeDownload}
-                    className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700 py-3"
+                    className="w-full bg-gradient-to-r from-orange-600 to-amber-600 text-white hover:from-orange-700 hover:to-amber-700 py-3"
                   >
                     🚀 Télécharger Gratuitement
                   </Button>
