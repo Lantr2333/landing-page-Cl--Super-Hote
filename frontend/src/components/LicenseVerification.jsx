@@ -131,7 +131,7 @@ const LicenseVerification = () => {
               <Button 
                 onClick={verifyLicense}
                 disabled={loading}
-                className="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700"
+                className="flex-1 bg-gradient-to-r from-orange-600 to-amber-600 text-white hover:from-orange-700 hover:to-amber-700"
               >
                 {loading ? (
                   <>
