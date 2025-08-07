@@ -66,27 +66,27 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Templates</h4>
             <ul className="space-y-2 text-slate-300">
               <li>
-                <a href="#pricing" className="hover:text-emerald-400 transition-colors">
+                <a href="#pricing" className="hover:text-orange-400 transition-colors">
                   Template Studio (19€)
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-emerald-400 transition-colors">
+                <a href="#pricing" className="hover:text-orange-400 transition-colors">
                   Template Appartement (29€)
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-emerald-400 transition-colors">
+                <a href="#pricing" className="hover:text-orange-400 transition-colors">
                   Template Maison (39€)
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-emerald-400 transition-colors">
+                <a href="#pricing" className="hover:text-orange-400 transition-colors">
                   Kit Complet (67€)
                 </a>
               </li>
               <li>
-                <span className="text-emerald-400 font-semibold">
+                <span className="text-orange-400 font-semibold">
                   🎁 Guide Gratuit Disponible
                 </span>
               </li>
