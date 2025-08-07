@@ -158,8 +158,8 @@ const PricingSection = () => {
                 key={product.id}
                 className={`relative h-full transition-all duration-300 hover:shadow-xl ${
                   isHighlighted
-                    ? "border-3 border-emerald-300 shadow-lg scale-105"
-                    : "border-2 border-slate-200 hover:border-emerald-200"
+                    ? "border-3 border-orange-300 shadow-lg scale-105"
+                    : "border-2 border-slate-200 hover:border-orange-200"
                 }`}
               >
                 {badge && (
