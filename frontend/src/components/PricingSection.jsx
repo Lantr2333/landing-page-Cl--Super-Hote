@@ -171,7 +171,7 @@ const PricingSection = () => {
                 <CardHeader className="text-center p-6">
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{product.name.split(' - ')[0]}</h3>
                   <div className="mb-2">
-                    <span className="text-3xl font-bold text-emerald-600">{product.price}</span>
+                    <span className="text-3xl font-bold text-orange-600">{product.price}</span>
                   </div>
                   <p className="text-slate-600 text-sm">{product.description}</p>
                 </CardHeader>
