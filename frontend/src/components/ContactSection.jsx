@@ -14,12 +14,12 @@ const ContactSection = () => {
           {/* Left Column - Contact Info */}
           <div className="space-y-8">
             <div>
-              <Badge className="bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 px-4 py-2 text-sm font-medium mb-4">
+              <Badge className="bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 px-4 py-2 text-sm font-medium mb-4">
                 BESOIN D'AIDE ?
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 Contactez{" "}
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
                   Anthony
                 </span>
               </h2>
