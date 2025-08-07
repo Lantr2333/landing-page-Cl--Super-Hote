@@ -245,11 +245,11 @@ const PricingSection = () => {
           </div>
           
           {/* Quote */}
-          <div className="max-w-2xl mx-auto mt-12 p-6 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border-2 border-emerald-100">
+          <div className="max-w-2xl mx-auto mt-12 p-6 bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl border-2 border-orange-100">
             <blockquote className="text-lg font-medium text-slate-800 text-center">
               « Excellence et Méthode Font la Différence »
             </blockquote>
-            <div className="text-emerald-600 font-semibold mt-2">
+            <div className="text-orange-600 font-semibold mt-2">
               — Anthony, Super-hôte depuis 2 ans
             </div>
           </div>
