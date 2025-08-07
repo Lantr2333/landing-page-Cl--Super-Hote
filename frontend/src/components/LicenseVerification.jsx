@@ -229,7 +229,7 @@ const LicenseVerification = () => {
                       <strong>Besoin d'aide ?</strong> Contactez-nous à{' '}
                       <a 
                         href="mailto:anthony@superhote-methode.fr" 
-                        className="text-emerald-600 hover:underline"
+                        className="text-orange-600 hover:underline"
                       >
                         anthony@superhote-methode.fr
                       </a>
