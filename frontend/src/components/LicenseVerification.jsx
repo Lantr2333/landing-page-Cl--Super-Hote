@@ -107,7 +107,7 @@ const LicenseVerification = () => {
                 <select
                   value={productPermalink}
                   onChange={(e) => setProductPermalink(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 >
                   <option value="">Sélectionner un template</option>
                   <option value="AirbnbTemplateStudio">Template Studio (19€)</option>
