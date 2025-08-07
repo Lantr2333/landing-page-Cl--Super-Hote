@@ -44,7 +44,7 @@ const TestimonialsSection = () => {
             <CardContent className="p-8 md:p-12">
               <div className="text-center space-y-6">
                 {/* Quote Icon */}
-                <Quote className="h-12 w-12 text-emerald-600 mx-auto" />
+                <Quote className="h-12 w-12 text-orange-600 mx-auto" />
                 
                 {/* Testimonial Text */}
                 <blockquote className="text-2xl md:text-3xl font-medium text-slate-800 leading-relaxed">
