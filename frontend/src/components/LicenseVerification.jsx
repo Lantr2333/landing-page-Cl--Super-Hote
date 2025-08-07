@@ -57,13 +57,13 @@ const LicenseVerification = () => {
     <section className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-teal-100 px-4 py-2 rounded-full mb-4">
-            <Shield className="h-5 w-5 text-emerald-600" />
-            <span className="text-emerald-700 font-semibold">Vérification de Licence</span>
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-100 to-amber-100 px-4 py-2 rounded-full mb-4">
+            <Shield className="h-5 w-5 text-orange-600" />
+            <span className="text-orange-700 font-semibold">Vérification de Licence</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Vérifiez votre{" "}
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
               Licence
             </span>
           </h2>
