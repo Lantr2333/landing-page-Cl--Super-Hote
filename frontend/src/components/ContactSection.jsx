@@ -31,11 +31,11 @@ const ContactSection = () => {
 
             {/* Contact Methods */}
             <div className="space-y-6">
-              <Card className="border-2 border-emerald-100 hover:border-emerald-200 transition-colors">
+              <Card className="border-2 border-orange-100 hover:border-orange-200 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-emerald-100 p-3 rounded-lg">
-                      <Mail className="h-6 w-6 text-emerald-600" />
+                    <div className="bg-orange-100 p-3 rounded-lg">
+                      <Mail className="h-6 w-6 text-orange-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-2">Email Support</h3>
@@ -44,7 +44,7 @@ const ContactSection = () => {
                       </p>
                       <a 
                         href="mailto:anthony@superhote-methode.fr" 
-                        className="text-emerald-600 hover:text-emerald-700 font-medium"
+                        className="text-orange-600 hover:text-orange-700 font-medium"
                       >
                         anthony@superhote-methode.fr
                       </a>
@@ -53,18 +53,18 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-emerald-100 hover:border-emerald-200 transition-colors">
+              <Card className="border-2 border-orange-100 hover:border-orange-200 transition-colors">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-emerald-100 p-3 rounded-lg">
-                      <MessageCircle className="h-6 w-6 text-emerald-600" />
+                    <div className="bg-orange-100 p-3 rounded-lg">
+                      <MessageCircle className="h-6 w-6 text-orange-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-2">Support Premium</h3>
                       <p className="text-slate-600 mb-2">
                         Accompagnement personnalisé pour les clients Kit Complet
                       </p>
-                      <span className="text-emerald-600 font-medium">
+                      <span className="text-orange-600 font-medium">
                         Inclus avec le Kit Complet (30 jours)
                       </span>
                     </div>
