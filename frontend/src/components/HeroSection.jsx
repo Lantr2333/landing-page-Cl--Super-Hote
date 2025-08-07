@@ -143,9 +143,9 @@ const HeroSection = () => {
           <div className="lg:pl-8">
             <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-200">
               <div className="text-center space-y-6">
-                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-teal-100 px-4 py-2 rounded-full">
-                  <Gift className="h-5 w-5 text-emerald-600" />
-                  <span className="text-emerald-700 font-semibold">Guide Gratuit</span>
+                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-100 to-amber-100 px-4 py-2 rounded-full">
+                  <Gift className="h-5 w-5 text-orange-600" />
+                  <span className="text-orange-700 font-semibold">Guide Gratuit</span>
                 </div>
                 
                 <h3 className="text-2xl font-bold text-slate-900">
